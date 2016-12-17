@@ -27,6 +27,7 @@ mongoose.connect(config.databaseURL, function(err){
 var productResource = require('./resources/product-resource.js');
 app.use('/api/products', productResource);
 
+app.use(express.static("public"));
 
 app.listen(3000, function(){
    console.log("CarotCreations API listening on port 3000!");
